@@ -1,0 +1,41 @@
+{
+    "name": "phonegap-tool-web2splash",
+    "description": "Generate multiple splash screens from an HTML template.",
+    "version": "0.0.1",
+    "homepage": "http://github.com/mwbrooks/phonegap-tool-web2splash",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/mwbrooks/phonegap-tool-web2splash.git"
+    },
+    "keywords": [
+        "phonegap",
+        "cordova",
+        "splashscreen",
+        "splash",
+        "screen"
+    ],
+    "preferGlobal": "false",
+    "bin": {
+        "web2splash": "./bin/web2splash.js"
+    },
+    "scripts": {
+        "test": "./node_modules/.bin/mocha --reporter spec --watch"
+    },
+    "engines": {
+        "node": "~0.8.x"
+    },
+    "dependencies": {
+        "commander": "0.6.x"
+    },
+    "devDependencies": {
+    },
+    "optionalDependencies": {
+    },
+    "author": {
+        "name": "Michael Brooks",
+        "email": "michael@michaelbrooks.ca",
+        "url": "http://michaelbrooks.ca/"
+    },
+    "contributors": [
+    ]
+}
