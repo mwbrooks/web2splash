@@ -1,3 +1,3 @@
-# Screenwriter - a PhoneGap splash screen generator
+# Web2Splash - a PhoneGap splash screen generator
 
-> Generate multiple splash screens from a HTML document template
+> Generate multiple splash screens from an HTML template.
