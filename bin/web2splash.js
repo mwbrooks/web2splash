@@ -22,7 +22,7 @@ var packageJSON = JSON.parse(fs.readFileSync(path.join(__dirname,'..','package.j
 program
     .version(packageJSON.version)
     .usage('[options] <input html>')
-    .option('-o, --output [path]',           'set output path for images', './output/');
+    .option('-o, --output [path]', 'set output path for images', './');
 
 /*
  * Command-line help
