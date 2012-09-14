@@ -22,8 +22,7 @@ var packageJSON = JSON.parse(fs.readFileSync(path.join(__dirname,'..','package.j
 program
     .version(packageJSON.version)
     .usage('[options] <input html>')
-    .option('-v, --version',                 'output the version number')
-    .option('-o, --output <path>',           'set image output path');
+    .option('-o, --output [path]',           'set output path for images', './output/');
 
 /*
  * Command-line help
@@ -42,6 +41,13 @@ program.on('--help', function(){
 
 program.parse(process.argv);
 program.input = program.args[0];
+
+if (!program.input) {
+    console.log('');
+    console.log('Error: <input html> must be provided.');
+    console.log('');
+    return false;
+}
 
 /*
  * Render an HTML document to a set of splash screen images
