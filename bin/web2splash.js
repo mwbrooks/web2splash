@@ -46,7 +46,7 @@ if (!program.input) {
     console.log('');
     console.log('Error: <input html> must be provided.');
     console.log('');
-    return false;
+    process.exit();
 }
 
 /*
@@ -58,5 +58,5 @@ web2splash.onRenderImage = function(image) {
 };
 
 web2splash.render(program.input, program.output, function(e, images) {
-    // complete
+    process.exit();
 });
