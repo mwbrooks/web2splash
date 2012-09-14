@@ -19,7 +19,7 @@
         "web2splash": "./bin/web2splash.js"
     },
     "scripts": {
-        "test": "./node_modules/.bin/mocha --reporter spec --watch"
+        "test": "./node_modules/.bin/jasmine-node --color --verbose spec"
     },
     "engines": {
         "node": "~0.8.x"
@@ -29,6 +29,7 @@
         "node-phantom": "0.1.2"
     },
     "devDependencies": {
+        "jasmine-node": "1.x.x"
     },
     "optionalDependencies": {
     },
