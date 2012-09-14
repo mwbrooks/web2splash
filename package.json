@@ -25,7 +25,8 @@
         "node": "~0.8.x"
     },
     "dependencies": {
-        "commander": "1.0.4"
+        "commander": "1.0.4",
+        "node-phantom": "0.1.2"
     },
     "devDependencies": {
     },

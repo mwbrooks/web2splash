@@ -7,7 +7,7 @@
 var fs = require('fs');
 var path = require('path');
 var program = require('commander');
-//var web2splash = require('./../lib/web2splash');
+var web2splash = require('./../lib/web2splash');
 
 /*
  * Load package.json
@@ -23,8 +23,6 @@ program
     .version(packageJSON.version)
     .usage('[options] <input html>')
     .option('-v, --version',                 'output the version number')
-    .option('-f, --format <type>',           'set splash screen image format as: png, jpg, or gif')
-    .option('-v, --viewport <width,height>', 'set browser viewport size')
     .option('-o, --output <path>',           'set image output path');
 
 /*
@@ -34,14 +32,25 @@ program
 program.on('--help', function(){
     console.log('  Examples:');
     console.log('');
-    console.log('    Render all supported splash screen images:');
-    console.log('');
     console.log('    $', program.name, '/path/to/splash.html');
-    console.log('');
-    console.log('    Render one PNG image of 480x800px:');
-    console.log('');
-    console.log('    $', program.name, '/path/to/splash.html --format=png --viewport=480x800');
     console.log('');
 });
 
+/*
+ * Parse the command-line
+ */
+
 program.parse(process.argv);
+program.input = program.args[0];
+
+/*
+ * Render an HTML document to a set of splash screen images
+ */
+
+web2splash.onRenderImage = function(image) {
+    console.log('  rendered: %s (%d x %dpx)', image.name, image.width, image.height);
+};
+
+web2splash.render(program.input, program.output, function(e, images) {
+    // complete
+});
