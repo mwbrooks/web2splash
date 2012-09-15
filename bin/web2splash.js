@@ -21,8 +21,7 @@ var packageJSON = JSON.parse(fs.readFileSync(path.join(__dirname,'..','package.j
 
 program
     .version(packageJSON.version)
-    .usage('[options] <input html>')
-    .option('-o, --output [path]', 'set output path for images', './');
+    .usage('[options] <input html> [output dir]');
 
 /*
  * Command-line help
@@ -32,6 +31,7 @@ program.on('--help', function(){
     console.log('  Examples:');
     console.log('');
     console.log('    $', program.name, '/path/to/splash.html');
+    console.log('    $', program.name, '/path/to/splash.html /path/to/output/');
     console.log('');
 });
 
@@ -41,10 +41,13 @@ program.on('--help', function(){
 
 program.parse(process.argv);
 program.input = program.args[0];
+program.output = program.args[1] || './';
 
 if (!program.input) {
+    program.outputHelp();
+    console.log('  Error:');
     console.log('');
-    console.log('Error: <input html> must be provided.');
+    console.log('    The <input html> parameter is missing.');
     console.log('');
     process.exit();
 }
