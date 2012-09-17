@@ -1,25 +1,26 @@
-# Web2Splash
+# web2splash
 
-> PhoneGap splash screen generate using an HTML template.
+> A PhoneGap splash screen generator using an HTML document as a template.
 
 ## About
 
-Web2Splash will generate every splash screen for every platform that is supported
-by PhoneGap. All you need to do is provide a responsive HTML document that will
-rendered at each splash screen's resolution.
+Web2Splash will generate every splash screen for every PhoneGap platform.
 
 A splash screen is the startup image displayed while your PhoneGap application
 loads. Since the image needs to match the device's screen size, you typically
-need to create multiple images for each platform. Unfortunately, many device
-screen's have different aspect ratios, so a simple image resize will not be
-effective.
+need to create multiple images for each platform. Even more annoying is that
+most platforms have devices with different screen aspect-ratios. This means
+a simple image resize will not cut it.
 
-Rather than creating a master image that is cropped, it makes sense to use a
-responsive HTML document. If you're a PhoneGap developer, then you've already
+Rather than creating a large master image that is cropped, it makes more sense
+to use a responsive HTML document. As PhoneGap developer, you've already
 created a responsive HTML web application. It makes sense to reuse your skills
-to create the splash screen.
+to create the splash screens.
 
-## Supported Splash Screens
+This tool reads in an HTML document into a headless Webkit browser, resizes
+the viewport to each splash screen size, and then renders an image.
+
+## Supported Platforms
 
 - Android
 - Bada
@@ -33,12 +34,12 @@ to create the splash screen.
 1. PhantomJs
     - [Download and install](http://phantomjs.org/)
 2. `phantomjs`
-    - Unless you used brew, you will need to symlink the `phantomjs` binary
+    - Unless you used brew, you will need to add `phantomjs` to your `PATH`
     - `ln -s /path/to/download/bin/phantomjs /usr/local/bin/phantomjs`
-    - `which phantomjs` should return `/user/local/bin/phantomjs`
-3. Install Web2Splash
+    - `which phantomjs` => `/user/local/bin/phantomjs`
+3. Install web2splash
     - Command-Line: `npm install -g phonegap-tool-web2splash`
-    - Node.js: Add `phonegap-tool-web2splash` to your `package.json`
+    - Node.js: Add `phonegap-tool-web2image` to your `package.json`
 
 ## Usage
 
@@ -50,7 +51,7 @@ to create the splash screen.
 
 ### node.js
 
-    var web2splash = require('web2splash');
+    var web2splash = require('phonegap-tool-web2splash');
 
     web2splash.onRenderImage = function(image) {
         // image.name, image.width, image.height
@@ -65,7 +66,7 @@ to create the splash screen.
 ### Source Code
 
     $ git clone https://github.com/mwbrooks/phonegap-tool-web2splash.git
-    $ cd phonegap-tool-web2splash/
+    $ cd web2splash/
     $ npm install
 
 ### Running Tests
