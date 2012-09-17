@@ -1,7 +1,8 @@
 {
     "name": "phonegap-tool-web2splash",
-    "description": "Generate multiple splash screens from an HTML template.",
+    "description": "A PhoneGap splash screen generator using an HTML document as a template.",
     "version": "0.0.1",
+    "main": "./lib/web2splash.js",
     "homepage": "http://github.com/mwbrooks/phonegap-tool-web2splash",
     "repository": {
         "type": "git",
