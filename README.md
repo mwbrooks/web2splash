@@ -32,8 +32,8 @@ the viewport to each splash screen size, and then renders an image.
 ## Install
 
 1. [Download and Install PhantomJs](http://phantomjs.org/)
-2. `ln -s /path/to/download/bin/phantomjs /usr/local/bin/phantomjs`
-3. `npm install phonegap-tool-web2splash`
+    - `ln -s /path/to/download/bin/phantomjs /usr/local/bin/phantomjs`
+2. `npm install phonegap-tool-web2splash`
     - Command-Line: `npm install -g phonegap-tool-web2splash`
     - Node.js: Add `phonegap-tool-web2image` to your `package.json`
 
@@ -56,16 +56,4 @@ the viewport to each splash screen size, and then renders an image.
     web2splash.render(input, output, function(e) {
         // done
     });
-
-## Development
-
-### Source Code
-
-    $ git clone https://github.com/mwbrooks/phonegap-tool-web2splash.git
-    $ cd web2splash/
-    $ npm install
-
-### Running Tests
-
-    $ npm test
 
