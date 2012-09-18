@@ -5,8 +5,8 @@ describe('web2splash', function() {
     describe('render', function() {
         beforeEach(function() {
             web2splash = require('../lib/web2splash');
-            spyOn(web2splash, '_renderImages').andCallFake(function(input, output, callback) {
-                callback(null, web2splash.images);
+            spyOn(web2splash, '_renderImages').andCallFake(function(input, output, images, callback) {
+                callback(null, images);
             });
         });
 
