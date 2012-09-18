@@ -1,8 +1,7 @@
-# web2splash
+# web2splash [![Build Status][travis-ci-img]][travis-ci-url]
 
 > A PhoneGap splash screen generator using an HTML document as a template.
 
-[![Build Status][travis-ci-img]][travis-ci-url]
 
 ## About
 
