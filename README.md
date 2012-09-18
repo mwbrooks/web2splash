@@ -42,7 +42,7 @@ the viewport to each splash screen size, and then renders an image.
 ### Command-Line
 
     $ web2splash --help
-
+    $ web2splash http://example.com/
     $ web2splash path/to/template.html path/to/output/dir
 
 ### node.js

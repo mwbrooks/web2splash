@@ -21,7 +21,7 @@ var packageJSON = JSON.parse(fs.readFileSync(path.join(__dirname,'..','package.j
 
 program
     .version(packageJSON.version)
-    .usage('[options] <input html> [output dir]');
+    .usage('[options] <html uri> [output dir]');
 
 /*
  * Command-line help
@@ -30,6 +30,7 @@ program
 program.on('--help', function(){
     console.log('  Examples:');
     console.log('');
+    console.log('    $', program.name, 'http://example.com/');
     console.log('    $', program.name, '/path/to/splash.html');
     console.log('    $', program.name, '/path/to/splash.html /path/to/output/');
     console.log('');
@@ -45,10 +46,6 @@ program.output = program.args[1] || './';
 
 if (!program.input) {
     program.outputHelp();
-    console.log('  Error:');
-    console.log('');
-    console.log('    The <input html> parameter is missing.');
-    console.log('');
     process.exit();
 }
 
