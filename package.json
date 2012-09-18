@@ -24,7 +24,7 @@
         "test": "./node_modules/.bin/jasmine-node --color --verbose spec"
     },
     "engines": {
-        "node": "~0.8.x"
+        "node": ">=0.6.x"
     },
     "dependencies": {
         "commander": "1.0.4",
