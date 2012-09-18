@@ -33,10 +33,8 @@ the viewport to each splash screen size, and then renders an image.
 ## Install
 
 1. [Download and Install PhantomJs](http://phantomjs.org/)
-    - `ln -s /path/to/download/bin/phantomjs /usr/local/bin/phantomjs`
-2. `npm install web2splash`
-    - Command-Line: `npm install -g web2splash`
-    - Node.js: Add `web2splash` to your `package.json`
+2. `ln -s /path/to/download/bin/phantomjs /usr/local/bin/phantomjs`
+3. `npm install [-g] web2splash`
 
 ## Usage
 
