@@ -1,19 +1,20 @@
 {
-    "name": "phonegap-tool-web2splash",
+    "name": "web2splash",
     "description": "A PhoneGap splash screen generator using an HTML document as a template.",
     "version": "0.2.1",
     "main": "./lib/web2splash.js",
-    "homepage": "http://github.com/mwbrooks/phonegap-tool-web2splash",
+    "homepage": "http://github.com/mwbrooks/web2splash",
     "repository": {
         "type": "git",
-        "url": "git://github.com/mwbrooks/phonegap-tool-web2splash.git"
+        "url": "git://github.com/mwbrooks/web2splash.git"
     },
     "keywords": [
-        "phonegap",
-        "cordova",
         "splashscreen",
         "splash",
-        "screen"
+        "screen",
+        "loading screen",
+        "phonegap",
+        "cordova"
     ],
     "preferGlobal": "false",
     "bin": {

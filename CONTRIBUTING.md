@@ -2,7 +2,7 @@
 
 ## Get the Source
 
-    $ git clone https://github.com/mwbrooks/phonegap-tool-web2splash.git
+    $ git clone https://github.com/mwbrooks/web2splash.git
     $ cd web2splash/
 
 ## Install the Dependencies
