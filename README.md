@@ -2,6 +2,8 @@
 
 > A PhoneGap splash screen generator using an HTML document as a template.
 
+[![Build Status][travis-ci-img]][travis-ci-url]
+
 ## About
 
 Web2Splash will generate every splash screen for every PhoneGap platform.
@@ -56,4 +58,7 @@ the viewport to each splash screen size, and then renders an image.
     web2splash.render(input, output, function(e) {
         // done
     });
+
+[travis-ci-img]: https://secure.travis-ci.org/mwbrooks/web2splash.png
+[travis-ci-url]: http://travis-ci.org/mwbrooks/web2splash
 
