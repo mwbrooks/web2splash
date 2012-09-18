@@ -12,9 +12,9 @@
         "splashscreen",
         "splash",
         "screen",
-        "loading screen",
         "phonegap",
-        "cordova"
+        "cordova",
+        "web2image"
     ],
     "preferGlobal": "false",
     "bin": {
