@@ -28,7 +28,7 @@
     },
     "dependencies": {
         "commander": "1.0.4",
-        "node-phantom": "0.2.5"
+        "phantom": "0.6.5"
     },
     "devDependencies": {
         "jasmine-node": "1.x.x"
