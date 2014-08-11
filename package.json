@@ -21,7 +21,7 @@
         "web2splash": "./bin/web2splash.js"
     },
     "scripts": {
-        "test": "./node_modules/.bin/jasmine-node --color --verbose spec"
+        "test": "jasmine-node --color spec"
     },
     "engines": {
         "node": ">=0.6.x"
@@ -31,7 +31,7 @@
         "phantom": "0.6.5"
     },
     "devDependencies": {
-        "jasmine-node": "1.x.x"
+        "jasmine-node": "1.14.5"
     },
     "optionalDependencies": {
     },
