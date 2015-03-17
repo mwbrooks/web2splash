@@ -1,7 +1,7 @@
 {
     "name": "web2splash",
     "description": "A PhoneGap splash screen generator using an HTML document as a template.",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "main": "./lib/web2splash.js",
     "homepage": "http://github.com/mwbrooks/web2splash",
     "repository": {
